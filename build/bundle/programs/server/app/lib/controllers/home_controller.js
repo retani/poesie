@@ -2,6 +2,7 @@
   layoutTemplate: 'MasterLayout',
 
   subscriptions: function() {
+    this.subscribe('onlineUsers');
   },
 
   action: function() {

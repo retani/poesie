@@ -10,4 +10,14 @@ Meteor.methods({
    */
 });
 
+Meteor.users.find({ "status.online": true }).observe({
+  added: function(id) {
+    // id just came online
+    //console.log(id)
+  },
+  removed: function(id) {
+    // id just went offline
+  }
+});
+
 })();

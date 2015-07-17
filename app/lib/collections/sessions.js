@@ -72,6 +72,10 @@ Sessions.helpers({
   currentPoem: function() {
     return Poems.findOne({ _id: this.history[0].poem });
   },
+  newEntry: function(basePoem, mappings) {
+    Meteor.call('sessions/newEntry', basePoem, mappings, this);
+  },
+  /*
   newEntry: function (basePoem) {
     thisSession = this
 
@@ -93,18 +97,9 @@ Sessions.helpers({
       }
       Sessions.update({ _id: thisSession._id },{ $push: { history: { $each: [newEntry], $position:0 } }})
     })
-  },
+  },*/
   next: function() {
-
-    requestedNumberOfLines = Meteor.users.totalPlayers() == 0 ? 1 : Meteor.users.totalPlayers()
-    possiblePoems = _.shuffle(Poems.find({ numberOfLines: requestedNumberOfLines }).fetch())
-
-    basePoem = possiblePoems[0]
-
-    //Meteor.users.totalPlayers()
-    //console.log("old: " + this.currentPoem().title)
-    Sessions.current().newEntry(basePoem)
-    //console.log("new: " + this.currentPoem().title)
+    Meteor.call('sessions/next');
   }
 });
 

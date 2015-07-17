@@ -94,14 +94,13 @@ Schemas.Poem = new SimpleSchema({
       label: "Reference"
     },
 
-    
     numberOfLines: {
       type: Number,
       label: "No. of lines",
       defaultValue: 0,
       optional: true,
       autoValue: function() {
-        if (this.isUpdate || this.isInsert) {
+        if ( (this.isUpdate && this.operator!="$set" ) || this.isInsert) {
           var count = this.field("lines").value.length;
           console.log("no. of lines: " + count)
           return count
@@ -128,37 +127,40 @@ Schemas.Poem = new SimpleSchema({
     },
 
     /*
-    poemID: {
+    poemHash: {
       type: String,
       index: true,
-      unique: true,
+      optional: true,
+      //unique: true,
       autoValue: function(doc) {
-        var seed = this.field("title");
-        return
+        var seed = ""
+        seed += this.field("title")//.replace(/ /g,'')
+        seed += this.field("lines").value.length
+        return seed
       }
-    }
+    },
     */
 
     lines: {
         type: [Object]
     },
     "lines.$.text": {
-        type: String,
-        autoform: {
-         afFieldInput: {
-           //type: 'contenteditable'
-         }
+      type: String,
+      autoform: {
+       afFieldInput: {
+         //type: 'contenteditable'
        }
+     }
     },
     "lines.$.styles": {
-        type: [String],
-        optional: true,
-        autoform: {
-          afFieldInput: {
-            multiple: true,
-            options: {"paragraph":"paragraph", "":"- none -"}
-          }
+      type: [String],
+      optional: true,
+      autoform: {
+        afFieldInput: {
+          multiple: true,
+          options: {"paragraph":"paragraph", "":"- none -"}
         }
+      }
     },
 
 });

@@ -2,22 +2,22 @@
   "format": "web-program-pre1",
   "manifest": [
     {
-      "path": "e03f1e4a711dab599c40f936ca6e4d008b548cf9.js",
+      "path": "c09941270e15b050cb26abe0f9df6a79a45a5907.js",
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/e03f1e4a711dab599c40f936ca6e4d008b548cf9.js",
-      "size": 608371,
-      "hash": "e03f1e4a711dab599c40f936ca6e4d008b548cf9"
+      "url": "/c09941270e15b050cb26abe0f9df6a79a45a5907.js",
+      "size": 714570,
+      "hash": "c09941270e15b050cb26abe0f9df6a79a45a5907"
     },
     {
-      "path": "087e553ae34768ea0fafbebf61e2c2eaacad8a7c.css",
+      "path": "d87c668b62a38af81622321458d901d8d896bc8f.css",
       "where": "client",
       "type": "css",
       "cacheable": true,
-      "url": "/087e553ae34768ea0fafbebf61e2c2eaacad8a7c.css?meteor_css_resource=true",
-      "size": 1098,
-      "hash": "087e553ae34768ea0fafbebf61e2c2eaacad8a7c"
+      "url": "/d87c668b62a38af81622321458d901d8d896bc8f.css?meteor_css_resource=true",
+      "size": 15689,
+      "hash": "d87c668b62a38af81622321458d901d8d896bc8f"
     },
     {
       "path": "app/.gitkeep",
@@ -27,6 +27,15 @@
       "url": "/.gitkeep",
       "size": 1,
       "hash": "adc83b19e793491b1c6ea0fd8b46cd9f32e592fc"
+    },
+    {
+      "path": "app/favicon.ico",
+      "where": "client",
+      "type": "asset",
+      "cacheable": false,
+      "url": "/favicon.ico",
+      "size": 318,
+      "hash": "8aaae245f0206caecdf766014a6fedb72fddb900"
     },
     {
       "path": "head.html",

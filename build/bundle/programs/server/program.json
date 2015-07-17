@@ -1,6 +1,6 @@
 {
   "format": "javascript-image-pre1",
-  "arch": "os",
+  "arch": "os.osx.x86_64",
   "load": [
     {
       "sourceMap": "packages/underscore.js.map",
@@ -288,6 +288,196 @@
       "path": "packages/comerc_autoform-selectize.js"
     },
     {
+      "sourceMap": "packages/accounts-base.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/accounts-base.js"
+    },
+    {
+      "sourceMap": "packages/coffeescript.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/coffeescript.js"
+    },
+    {
+      "sourceMap": "packages/mizzao_timesync.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/mizzao_timesync.js"
+    },
+    {
+      "sourceMap": "packages/mizzao_user-status.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/mizzao_user-status.js"
+    },
+    {
+      "node_modules": "npm/npm-bcrypt/node_modules",
+      "sourceMap": "packages/npm-bcrypt.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/npm-bcrypt.js"
+    },
+    {
+      "sourceMap": "packages/sha.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/sha.js"
+    },
+    {
+      "sourceMap": "packages/srp.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/srp.js"
+    },
+    {
+      "node_modules": "npm/email/node_modules",
+      "sourceMap": "packages/email.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/email.js"
+    },
+    {
+      "sourceMap": "packages/accounts-password.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/accounts-password.js"
+    },
+    {
+      "node_modules": "npm/artwells_accounts-guest/node_modules",
+      "sourceMap": "packages/artwells_accounts-guest.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/artwells_accounts-guest.js"
+    },
+    {
+      "sourceMap": "packages/wolves_bourbon.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/wolves_bourbon.js",
+      "assets": {
+        "scss.json": "assets/packages/wolves_bourbon/scss.json",
+        "bourbon/settings/_prefixer.scss": "assets/packages/wolves_bourbon/bourbon/settings/_prefixer.scss",
+        "bourbon/settings/_px-to-em.scss": "assets/packages/wolves_bourbon/bourbon/settings/_px-to-em.scss",
+        "bourbon/settings/_asset-pipeline.scss": "assets/packages/wolves_bourbon/bourbon/settings/_asset-pipeline.scss",
+        "bourbon/helpers/_convert-units.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_convert-units.scss",
+        "bourbon/helpers/_directional-values.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_directional-values.scss",
+        "bourbon/helpers/_font-source-declaration.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_font-source-declaration.scss",
+        "bourbon/helpers/_gradient-positions-parser.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_gradient-positions-parser.scss",
+        "bourbon/helpers/_linear-angle-parser.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_linear-angle-parser.scss",
+        "bourbon/helpers/_linear-gradient-parser.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_linear-gradient-parser.scss",
+        "bourbon/helpers/_linear-positions-parser.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_linear-positions-parser.scss",
+        "bourbon/helpers/_linear-side-corner-parser.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_linear-side-corner-parser.scss",
+        "bourbon/helpers/_radial-arg-parser.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_radial-arg-parser.scss",
+        "bourbon/helpers/_radial-gradient-parser.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_radial-gradient-parser.scss",
+        "bourbon/helpers/_radial-positions-parser.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_radial-positions-parser.scss",
+        "bourbon/helpers/_render-gradients.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_render-gradients.scss",
+        "bourbon/helpers/_shape-size-stripper.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_shape-size-stripper.scss",
+        "bourbon/helpers/_str-to-num.scss": "assets/packages/wolves_bourbon/bourbon/helpers/_str-to-num.scss",
+        "bourbon/functions/_assign-inputs.scss": "assets/packages/wolves_bourbon/bourbon/functions/_assign-inputs.scss",
+        "bourbon/functions/_contains-falsy.scss": "assets/packages/wolves_bourbon/bourbon/functions/_contains-falsy.scss",
+        "bourbon/functions/_contains.scss": "assets/packages/wolves_bourbon/bourbon/functions/_contains.scss",
+        "bourbon/functions/_is-length.scss": "assets/packages/wolves_bourbon/bourbon/functions/_is-length.scss",
+        "bourbon/functions/_is-light.scss": "assets/packages/wolves_bourbon/bourbon/functions/_is-light.scss",
+        "bourbon/functions/_is-number.scss": "assets/packages/wolves_bourbon/bourbon/functions/_is-number.scss",
+        "bourbon/functions/_is-size.scss": "assets/packages/wolves_bourbon/bourbon/functions/_is-size.scss",
+        "bourbon/functions/_modular-scale.scss": "assets/packages/wolves_bourbon/bourbon/functions/_modular-scale.scss",
+        "bourbon/functions/_px-to-em.scss": "assets/packages/wolves_bourbon/bourbon/functions/_px-to-em.scss",
+        "bourbon/functions/_px-to-rem.scss": "assets/packages/wolves_bourbon/bourbon/functions/_px-to-rem.scss",
+        "bourbon/functions/_shade.scss": "assets/packages/wolves_bourbon/bourbon/functions/_shade.scss",
+        "bourbon/functions/_strip-units.scss": "assets/packages/wolves_bourbon/bourbon/functions/_strip-units.scss",
+        "bourbon/functions/_tint.scss": "assets/packages/wolves_bourbon/bourbon/functions/_tint.scss",
+        "bourbon/functions/_transition-property-name.scss": "assets/packages/wolves_bourbon/bourbon/functions/_transition-property-name.scss",
+        "bourbon/functions/_unpack.scss": "assets/packages/wolves_bourbon/bourbon/functions/_unpack.scss",
+        "bourbon/css3/_animation.scss": "assets/packages/wolves_bourbon/bourbon/css3/_animation.scss",
+        "bourbon/css3/_appearance.scss": "assets/packages/wolves_bourbon/bourbon/css3/_appearance.scss",
+        "bourbon/css3/_backface-visibility.scss": "assets/packages/wolves_bourbon/bourbon/css3/_backface-visibility.scss",
+        "bourbon/css3/_background.scss": "assets/packages/wolves_bourbon/bourbon/css3/_background.scss",
+        "bourbon/css3/_background-image.scss": "assets/packages/wolves_bourbon/bourbon/css3/_background-image.scss",
+        "bourbon/css3/_border-image.scss": "assets/packages/wolves_bourbon/bourbon/css3/_border-image.scss",
+        "bourbon/css3/_calc.scss": "assets/packages/wolves_bourbon/bourbon/css3/_calc.scss",
+        "bourbon/css3/_columns.scss": "assets/packages/wolves_bourbon/bourbon/css3/_columns.scss",
+        "bourbon/css3/_filter.scss": "assets/packages/wolves_bourbon/bourbon/css3/_filter.scss",
+        "bourbon/css3/_flex-box.scss": "assets/packages/wolves_bourbon/bourbon/css3/_flex-box.scss",
+        "bourbon/css3/_font-face.scss": "assets/packages/wolves_bourbon/bourbon/css3/_font-face.scss",
+        "bourbon/css3/_font-feature-settings.scss": "assets/packages/wolves_bourbon/bourbon/css3/_font-feature-settings.scss",
+        "bourbon/css3/_hyphens.scss": "assets/packages/wolves_bourbon/bourbon/css3/_hyphens.scss",
+        "bourbon/css3/_hidpi-media-query.scss": "assets/packages/wolves_bourbon/bourbon/css3/_hidpi-media-query.scss",
+        "bourbon/css3/_image-rendering.scss": "assets/packages/wolves_bourbon/bourbon/css3/_image-rendering.scss",
+        "bourbon/css3/_keyframes.scss": "assets/packages/wolves_bourbon/bourbon/css3/_keyframes.scss",
+        "bourbon/css3/_linear-gradient.scss": "assets/packages/wolves_bourbon/bourbon/css3/_linear-gradient.scss",
+        "bourbon/css3/_perspective.scss": "assets/packages/wolves_bourbon/bourbon/css3/_perspective.scss",
+        "bourbon/css3/_radial-gradient.scss": "assets/packages/wolves_bourbon/bourbon/css3/_radial-gradient.scss",
+        "bourbon/css3/_selection.scss": "assets/packages/wolves_bourbon/bourbon/css3/_selection.scss",
+        "bourbon/css3/_text-decoration.scss": "assets/packages/wolves_bourbon/bourbon/css3/_text-decoration.scss",
+        "bourbon/css3/_transform.scss": "assets/packages/wolves_bourbon/bourbon/css3/_transform.scss",
+        "bourbon/css3/_transition.scss": "assets/packages/wolves_bourbon/bourbon/css3/_transition.scss",
+        "bourbon/css3/_user-select.scss": "assets/packages/wolves_bourbon/bourbon/css3/_user-select.scss",
+        "bourbon/css3/_placeholder.scss": "assets/packages/wolves_bourbon/bourbon/css3/_placeholder.scss",
+        "bourbon/addons/_border-color.scss": "assets/packages/wolves_bourbon/bourbon/addons/_border-color.scss",
+        "bourbon/addons/_border-radius.scss": "assets/packages/wolves_bourbon/bourbon/addons/_border-radius.scss",
+        "bourbon/addons/_border-style.scss": "assets/packages/wolves_bourbon/bourbon/addons/_border-style.scss",
+        "bourbon/addons/_border-width.scss": "assets/packages/wolves_bourbon/bourbon/addons/_border-width.scss",
+        "bourbon/addons/_buttons.scss": "assets/packages/wolves_bourbon/bourbon/addons/_buttons.scss",
+        "bourbon/addons/_clearfix.scss": "assets/packages/wolves_bourbon/bourbon/addons/_clearfix.scss",
+        "bourbon/addons/_ellipsis.scss": "assets/packages/wolves_bourbon/bourbon/addons/_ellipsis.scss",
+        "bourbon/addons/_font-stacks.scss": "assets/packages/wolves_bourbon/bourbon/addons/_font-stacks.scss",
+        "bourbon/addons/_hide-text.scss": "assets/packages/wolves_bourbon/bourbon/addons/_hide-text.scss",
+        "bourbon/addons/_margin.scss": "assets/packages/wolves_bourbon/bourbon/addons/_margin.scss",
+        "bourbon/addons/_padding.scss": "assets/packages/wolves_bourbon/bourbon/addons/_padding.scss",
+        "bourbon/addons/_position.scss": "assets/packages/wolves_bourbon/bourbon/addons/_position.scss",
+        "bourbon/addons/_prefixer.scss": "assets/packages/wolves_bourbon/bourbon/addons/_prefixer.scss",
+        "bourbon/addons/_retina-image.scss": "assets/packages/wolves_bourbon/bourbon/addons/_retina-image.scss",
+        "bourbon/addons/_size.scss": "assets/packages/wolves_bourbon/bourbon/addons/_size.scss",
+        "bourbon/addons/_text-inputs.scss": "assets/packages/wolves_bourbon/bourbon/addons/_text-inputs.scss",
+        "bourbon/addons/_timing-functions.scss": "assets/packages/wolves_bourbon/bourbon/addons/_timing-functions.scss",
+        "bourbon/addons/_triangle.scss": "assets/packages/wolves_bourbon/bourbon/addons/_triangle.scss",
+        "bourbon/addons/_word-wrap.scss": "assets/packages/wolves_bourbon/bourbon/addons/_word-wrap.scss",
+        "bourbon/_bourbon-deprecated-upcoming.scss": "assets/packages/wolves_bourbon/bourbon/_bourbon-deprecated-upcoming.scss",
+        "bourbon/_bourbon.scss": "assets/packages/wolves_bourbon/bourbon/_bourbon.scss"
+      }
+    },
+    {
+      "sourceMap": "packages/wolves_bitters.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/wolves_bitters.js",
+      "assets": {
+        "scss.json": "assets/packages/wolves_bitters/scss.json",
+        "bitters/_variables.scss": "assets/packages/wolves_bitters/bitters/_variables.scss",
+        "bitters/_typography.scss": "assets/packages/wolves_bitters/bitters/_typography.scss",
+        "bitters/_forms.scss": "assets/packages/wolves_bitters/bitters/_forms.scss",
+        "bitters/_tables.scss": "assets/packages/wolves_bitters/bitters/_tables.scss",
+        "bitters/_lists.scss": "assets/packages/wolves_bitters/bitters/_lists.scss",
+        "bitters/_buttons.scss": "assets/packages/wolves_bitters/bitters/_buttons.scss",
+        "bitters/_grid-settings.scss": "assets/packages/wolves_bitters/bitters/_grid-settings.scss",
+        "bitters/_base.scss": "assets/packages/wolves_bitters/bitters/_base.scss"
+      }
+    },
+    {
+      "sourceMap": "packages/dburles_collection-helpers.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/dburles_collection-helpers.js"
+    },
+    {
+      "sourceMap": "packages/momentjs_moment.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/momentjs_moment.js"
+    },
+    {
+      "sourceMap": "packages/lbee_moment-helpers.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/lbee_moment-helpers.js"
+    },
+    {
+      "sourceMap": "packages/matb33_collection-hooks.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/matb33_collection-hooks.js"
+    },
+    {
+      "sourceMap": "packages/comerc_bs-typeahead.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/comerc_bs-typeahead.js"
+    },
+    {
+      "sourceMap": "packages/comerc_autoform-typeahead.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/comerc_autoform-typeahead.js"
+    },
+    {
+      "sourceMap": "packages/multiply_iron-router-progress.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/multiply_iron-router-progress.js"
+    },
+    {
       "sourceMap": "packages/session.js.map",
       "sourceMapRoot": "packages",
       "path": "packages/session.js"
@@ -307,13 +497,43 @@
       }
     },
     {
+      "path": "app/lib/collections/sessions.js",
+      "assets": {
+        ".gitkeep": "assets/app/.gitkeep"
+      }
+    },
+    {
+      "path": "app/lib/collections/users.js",
+      "assets": {
+        ".gitkeep": "assets/app/.gitkeep"
+      }
+    },
+    {
       "path": "app/lib/controllers/edit_controller.js",
       "assets": {
         ".gitkeep": "assets/app/.gitkeep"
       }
     },
     {
+      "path": "app/lib/controllers/edit_session_controller.js",
+      "assets": {
+        ".gitkeep": "assets/app/.gitkeep"
+      }
+    },
+    {
+      "path": "app/lib/controllers/gallery_controller.js",
+      "assets": {
+        ".gitkeep": "assets/app/.gitkeep"
+      }
+    },
+    {
       "path": "app/lib/controllers/home_controller.js",
+      "assets": {
+        ".gitkeep": "assets/app/.gitkeep"
+      }
+    },
+    {
+      "path": "app/lib/controllers/play_controller.js",
       "assets": {
         ".gitkeep": "assets/app/.gitkeep"
       }
@@ -331,6 +551,12 @@
       }
     },
     {
+      "path": "app/lib/controllers/sessions_controller.js",
+      "assets": {
+        ".gitkeep": "assets/app/.gitkeep"
+      }
+    },
+    {
       "path": "app/lib/methods.js",
       "assets": {
         ".gitkeep": "assets/app/.gitkeep"
@@ -338,6 +564,12 @@
     },
     {
       "path": "app/lib/routes.js",
+      "assets": {
+        ".gitkeep": "assets/app/.gitkeep"
+      }
+    },
+    {
+      "path": "app/server/collections/users.js",
       "assets": {
         ".gitkeep": "assets/app/.gitkeep"
       }
@@ -359,6 +591,11 @@
       "assets": {
         ".gitkeep": "assets/app/.gitkeep"
       }
+    },
+    {
+      "sourceMap": "packages/service-configuration.js.map",
+      "sourceMapRoot": "packages",
+      "path": "packages/service-configuration.js"
     }
   ]
 }

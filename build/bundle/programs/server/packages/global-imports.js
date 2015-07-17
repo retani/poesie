@@ -2,6 +2,11 @@
 
 Router = Package['iron:router'].Router;
 RouteController = Package['iron:router'].RouteController;
+Accounts = Package['accounts-base'].Accounts;
+UserStatus = Package['mizzao:user-status'].UserStatus;
+AccountsGuest = Package['artwells:accounts-guest'].AccountsGuest;
+mo = Package['lbee:moment-helpers'].mo;
+CollectionHooks = Package['matb33:collection-hooks'].CollectionHooks;
 Meteor = Package.meteor.Meteor;
 WebApp = Package.webapp.WebApp;
 main = Package.webapp.main;
