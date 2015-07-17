@@ -70,7 +70,8 @@ Sessions.helpers({
         return this.title
   },
   currentPoem: function() {
-    return Poems.findOne({ _id: this.history[0].poem });
+    if (this.history)
+      return Poems.findOne({ _id: this.history[0].poem });
   },
   newEntry: function(basePoem, mappings) {
     Meteor.call('sessions/newEntry', basePoem, mappings, this);

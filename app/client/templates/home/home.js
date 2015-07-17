@@ -15,7 +15,10 @@ Template.Home.helpers({
     return Sessions.current()
   },
   currentSessionLength: function() {
-    return Sessions.current().history.length
+    if (Sessions.current().history)
+      return Sessions.current().history.length
+    else
+      return 0
   },
   currentEntry: function() {
     return Sessions.current().currentEntry()
