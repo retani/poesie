@@ -1,0 +1,48 @@
+<template name="Home">
+  <h1>Poesie</h1>
+
+  <ul>
+    <li>
+      <a href="{{ pathFor 'poems' }}">edit poems ({{ totalPoems }})</a>
+    </li>
+    <li>
+      <a href="{{ pathFor 'sessions' }}">edit sessions ({{ totalSessions }})</a>
+    </li>
+  </ul>  
+
+  <p>
+    <a class="button" href="{{ pathFor 'screen' }}">screen</a>
+    <a class="button" href="{{ pathFor 'play' }}">play</a>
+    <span class="button next">next</span>
+  </p>  
+
+  <table>
+    <tr>
+      <th>
+        current session 
+      </th>
+      <td>
+        <a href="{{ pathFor 'sessionEdit' _id=currentSession._id }}">
+          {{ currentSession.title }} ({{ currentSessionLength }})
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        current poem: 
+      </th>
+      <td>
+        {{ currentPoem.displayTitle }} by {{ currentPoem.author }}
+      </td>
+    </tr>
+    <tr>
+      <th>
+        players: 
+      </th>
+      <td>
+        {{ totalPlayers }}
+      </td>
+    </tr>
+  </table>
+
+</template>

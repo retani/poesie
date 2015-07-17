@@ -1,0 +1,25 @@
+/*****************************************************************************/
+/* Header: Style */
+/*****************************************************************************/
+.header {
+  padding-bottom:0.6em;
+  margin-bottom:0.6em;
+  border: solid 0px black;
+  border-bottom-width: 2px;
+  overflow: hidden;
+
+  li {
+    float: left;
+    padding-right: 1em;
+  }
+
+  ul {
+  }
+
+  ul::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+}

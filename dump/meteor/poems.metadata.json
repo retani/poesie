@@ -1,0 +1,1 @@
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "meteor.poems" }, { "v" : 1, "key" : { "count" : 1 }, "name" : "c2_count", "ns" : "meteor.poems", "safe" : true, "background" : true, "sparse" : false } ] }
