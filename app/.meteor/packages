@@ -23,3 +23,5 @@ matb33:collection-hooks
 comerc:bs-typeahead
 comerc:autoform-typeahead
 multiply:iron-router-progress
+udondan:jszip
+momentjs:moment

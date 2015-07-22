@@ -102,7 +102,7 @@ Schemas.Poem = new SimpleSchema({
       autoValue: function() {
         if ( (this.isUpdate && this.operator!="$set" ) || this.isInsert) {
           var count = this.field("lines").value.length;
-          console.log("no. of lines: " + count)
+          //console.log("no. of lines: " + count)
           return count
         }
       }

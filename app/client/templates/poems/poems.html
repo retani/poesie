@@ -9,6 +9,16 @@
       {{> Poem}}
     {{/each}}
   </ul>
+
+  <aside>
+    <a href="{{ pathFor 'download' }}" class="export">download a backup of root poems</a><br>
+    <a class="import">load default root poems (don't overwrite any existing poems)</a>
+    {{#each importedPoems}}
+      {{ _id }} {{ title }}
+    {{/each}}
+
+  </aside>
+
 </template>
 
 <template name="Poem">

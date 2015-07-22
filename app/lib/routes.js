@@ -5,6 +5,44 @@ Router.configure({
   progressDelay : 800
 });
     
+/** download BEGIN **/
+
+Router.map(function() {
+  this.route('download', {
+    where: 'server',
+    path: 'download',
+    action: function() {
+      var self = this;
+
+      // Create zip
+      var zip = new JSZip();
+
+      // Add files to the zip
+
+      //Poems.find({ "rootPoem" : null }).forEach( function(poem) {
+      //  zip.file(poem._id+'.json', JSON.stringify(poem));
+      //})
+
+      zip.file('rootPoems.json', JSON.stringify(Poems.find({ "rootPoem" : null }).fetch()));
+
+      // Generate zip stream
+      var output = zip.generate({
+        type:        "nodebuffer",
+        compression: "DEFLATE"
+      });
+
+      // Set headers
+      self.response.setHeader("Content-Type", "application/octet-stream");
+      self.response.setHeader("Content-disposition", "attachment; filename=poems-"+moment().format("YYYY-MM-DD-HH-mm")+".zip");
+      self.response.writeHead(200);
+
+      // Send content
+      self.response.end(output);
+    }
+  });
+});
+
+/** download END **/
 
 Router.route('/', {
   name: 'home',

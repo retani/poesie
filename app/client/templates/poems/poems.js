@@ -2,6 +2,13 @@
 /* Poems: Event Handlers */
 /*****************************************************************************/
 Template.Poems.events({
+  "click .import": function () {
+    Meteor.call('import', "rootPoems", function (error, result) {
+      if (error) console.log(error)
+      console.log(result)
+      Session.set('importedPoems',result)
+    });
+  }
 });
 
 /*****************************************************************************/
@@ -16,6 +23,11 @@ Template.Poems.helpers({
 Template.Poem.helpers({
   isNewPoem: function () {
     return typeof this.updatedAt != "undefined" && (new Date).getTime() - this.updatedAt.getTime() < 200000
+  },
+  importedPoems: function(){ 
+    console.log("importedPoems")
+    console.log(Session.get('importedPoems'))
+    return Session.get('importedPoems')
   }
 })
 
