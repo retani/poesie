@@ -2,4 +2,23 @@
 /* Screen: Style */
 /*****************************************************************************/
 .screen {
+  height: 100%;
+  background-color: black;
+  color: white;
+
+  transform: rotateY(180deg);
+
+  .title, .poem {
+    font-size: 3vw;
+  }
+
+  .title {
+  }
+
+  .poem {
+  }
+
+  .author {
+    font-size: 2vw;
+  }
 }

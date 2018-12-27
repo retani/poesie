@@ -1,11 +1,13 @@
 <template name="Screen">
-  <h1>{{poem.title}}</h1>
-  {{#each poem.lines}}
-    <div>
-      {{text}}
-    </div>
-  {{/each}}
-  <p align="right">
-    {{poem.author}}
-  </p>
+  <div class="screen">
+    <h1 class="title">{{poem.title}}</h1>
+    {{#each poem.lines}}
+      <div class="poem">
+        {{text}}
+      </div>
+    {{/each}}
+    <p align="right" class="author">
+      {{poem.author}}
+    </p>
+  </div>
 </template>

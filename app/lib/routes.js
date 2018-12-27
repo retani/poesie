@@ -44,7 +44,7 @@ Router.map(function() {
 
 /** download END **/
 
-Router.route('/', {
+Router.route('/admin', {
   name: 'home',
   controller: 'HomeController',
   action: 'action',
@@ -85,7 +85,7 @@ Router.route('screen', {
 });
 
 
-Router.route('play', {
+Router.route('/', {
   name: 'play',
   controller: 'PlayController',
   onRun: function () {

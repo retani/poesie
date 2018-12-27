@@ -5,6 +5,10 @@ Template.Play.events({
   "change .line, keyup .line": function (event) {
     newLine = event.target.value
 
+    if (!Sessions.current().currentPoem()) {
+      console.warn("no current poem"); return;
+    }
+
     var username = Meteor.user().username
     var mappings = Sessions.current().currentEntry().mappings
     var lineNumber = mappings.indexOf(username)
