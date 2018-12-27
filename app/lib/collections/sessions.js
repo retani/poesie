@@ -13,6 +13,10 @@ Schemas.Session = new SimpleSchema({
         type: Boolean,
         label: "Active",
     },
+    largeMessage: {
+        type: String,
+        optional: true,
+    },
     selectionMode: {
         type: String,
         label: "Selection Mode",

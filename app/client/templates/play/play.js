@@ -30,9 +30,17 @@ Template.Play.helpers({
     var username = Meteor.user().username
     var mappings = Sessions.current().currentEntry().mappings
     var lineNumber = mappings.indexOf(username)
-    var line = Sessions.current().currentPoem().lines[lineNumber]
-    return line.text
-  }
+    if (lineNumber < 0) {
+      return "[Please wait for next poem]"
+    }
+    else {
+      var line = Sessions.current().currentPoem().lines[lineNumber]
+      return line.text
+    }
+  },
+  session: function () {
+    return Sessions.current()
+  },  
 });
 
 /*****************************************************************************/

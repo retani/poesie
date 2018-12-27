@@ -8,6 +8,9 @@ Template.Screen.events({
 /* Screen: Helpers */
 /*****************************************************************************/
 Template.Screen.helpers({
+  session: function () {
+    return Sessions.current()
+  },
   poem: function () {
     return Sessions.current().currentPoem()
   },

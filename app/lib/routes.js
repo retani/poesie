@@ -44,7 +44,7 @@ Router.map(function() {
 
 /** download END **/
 
-Router.route('/admin', {
+Router.route('/adminxxx', {
   name: 'home',
   controller: 'HomeController',
   action: 'action',
