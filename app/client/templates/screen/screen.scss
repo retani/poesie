@@ -10,7 +10,7 @@
   transform: rotateY(180deg);
 
   .title, .poem {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 
   .title {
@@ -20,6 +20,20 @@
   }
 
   .author {
-    font-size: 2vw;
+    margin-top: 1em;
+    font-size: 3vw;
+  }
+
+  .note {
+    position: fixed;
+    bottom: 0;
+    font-size: 3vw;
+    color: red;
+
+    background-color: #333;
+
+    img {
+      height: 14vh;
+    }
   }
 }
