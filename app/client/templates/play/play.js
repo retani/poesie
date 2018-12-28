@@ -17,7 +17,10 @@ Template.Play.events({
     $set[target] = newLine;
     console.log($set)
     Poems.update({ _id : Sessions.current().currentPoem()._id }, { $set: $set }, function (err, res) {
-      console.log(err)
+      if (err) 
+        console.log(err)
+      else
+        Meteor.call('sessions/active/touch')
     })
   }
 });
@@ -25,18 +28,24 @@ Template.Play.events({
 /*****************************************************************************/
 /* Play: Helpers */
 /*****************************************************************************/
+
 Template.Play.helpers({
+  hasLine: function() {
+    var username = Meteor.user().username
+    var mappings = Sessions.current().currentEntry().mappings
+    var lineNumber = mappings.indexOf(username)
+    return (lineNumber > -1)
+  },
+  waitText: function() {
+    var countdown = Sessions.current().countdown
+    return "[Please wait " + countdown + "s to join]"
+  },
   line: function () {
     var username = Meteor.user().username
     var mappings = Sessions.current().currentEntry().mappings
     var lineNumber = mappings.indexOf(username)
-    if (lineNumber < 0) {
-      return "[Please wait for next poem]"
-    }
-    else {
-      var line = Sessions.current().currentPoem().lines[lineNumber]
-      return line.text
-    }
+    var line = Sessions.current().currentPoem().lines[lineNumber]
+    return line.text
   },
   session: function () {
     return Sessions.current()

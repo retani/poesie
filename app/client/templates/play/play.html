@@ -1,6 +1,12 @@
 <template name="Play">
-  <textarea class="line">{{ line }}</textarea>
-  <div class="largeMessage">
-    {{session.largeMessage}}
-  </div>  
+  {{#if hasLine}}
+    <textarea class="line">{{ line }}</textarea>
+    <div class="largeMessage">
+      {{session.largeMessage}}
+    </div>    
+  {{else}}
+    <div class="smallMessage">
+      {{waitText}}
+    </div>
+  {{/if}}
 </template>

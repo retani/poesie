@@ -21,7 +21,11 @@ Meteor.methods({
        requestedNumberOfLines = Meteor.users.totalPlayers() == 0 ? 1 : Meteor.users.totalPlayers()
        possiblePoems = _.shuffle(Poems.find({ numberOfLines: requestedNumberOfLines }).fetch())
 
-       basePoem = possiblePoems[0]
+       basePoem = (
+          Sessions.current().currentPoem().title === possiblePoems[0].title && possiblePoems.length > 1 
+          ? possiblePoems[1]
+          : possiblePoems[0]
+         )
 
       /*
        var mappings;
@@ -38,6 +42,13 @@ Meteor.methods({
        Sessions.current().newEntry(basePoem, mappings)
        //console.log("new: " + this.currentPoem().title)
    },
+
+  'sessions/active/touch': function() {
+      const activeSession = Sessions.current()
+      if (activeSession) {
+        Sessions.update( activeSession, { $set: { touchedAt: new Date() }})
+      }
+  },
 
   'sessions/newEntry': function (basePoem, mappings, session) {
     thisSession = session

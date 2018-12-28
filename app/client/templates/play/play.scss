@@ -3,3 +3,12 @@
 /*****************************************************************************/
 .play {
 }
+
+.smallMessage {
+  position: fixed;
+  top:0;
+  left:0;
+  user-select: none;
+  padding: 1em;
+  opacity: 0.6;
+}

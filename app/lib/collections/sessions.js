@@ -17,6 +17,10 @@ Schemas.Session = new SimpleSchema({
         type: String,
         optional: true,
     },
+    countdown: {
+      type: Number,
+      optional: true,
+    },    
     selectionMode: {
         type: String,
         label: "Selection Mode",
@@ -25,6 +29,10 @@ Schemas.Session = new SimpleSchema({
     timingMode: {
         type: String,
         label: "Timing Mode",
+        optional: true,
+    },
+    touchedAt: {
+        type: Date,
         optional: true,
     },
     "createdAt": {
