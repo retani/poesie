@@ -70,7 +70,7 @@ Schemas.Session = new SimpleSchema({
 
 Sessions.helpers({
   currentEntry: function() {
-    return this.history[0]
+    return this.history ? this.history[0] : null
   },
   isCurrent: function() {
     this == Sessions.current()
@@ -125,6 +125,17 @@ Sessions.current = function () {
 }
 
 if (Meteor.isServer) {
+
+  Sessions.before.insert(function (userId, doc) {
+    if (doc.active) {
+      console.log("deactivate != " + doc._id)
+      Sessions.update({ _id: { $ne : doc._id } }, { $set: { active: false }}, {multi: true}, function(error,number) {
+        console.warn(error)
+        console.log(number + " sessions deactivated")
+      } )
+    }
+  });
+
   Sessions.allow({
     insert: function (userId, doc) {
       return true;

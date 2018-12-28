@@ -18,14 +18,14 @@ Meteor.methods({
 
    'sessions/next': function() {
 
-       requestedNumberOfLines = Meteor.users.totalPlayers() == 0 ? 1 : Meteor.users.totalPlayers()
-       possiblePoems = _.shuffle(Poems.find({ numberOfLines: requestedNumberOfLines }).fetch())
-
-       basePoem = (
-          Sessions.current().currentPoem().title === possiblePoems[0].title && possiblePoems.length > 1 
-          ? possiblePoems[1]
-          : possiblePoems[0]
-         )
+      const requestedNumberOfLines = Meteor.users.totalPlayers() == 0 ? 1 : Meteor.users.totalPlayers()
+      const possiblePoems = _.shuffle(Poems.find({ numberOfLines: requestedNumberOfLines }).fetch())
+      const currentPoem = Sessions.current().currentPoem()
+      
+      var basePoem = possiblePoems[0]
+      if (currentPoem && currentPoem.title === basePoem.title && possiblePoems.length > 1 ) {
+        basePoem = possiblePoems[1] // take a chance
+      } 
 
       /*
        var mappings;

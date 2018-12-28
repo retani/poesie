@@ -16,9 +16,14 @@ const gameUpdate = function() {
 
   const entry = activeSession.currentEntry()
 
+  if (!entry) {
+    Meteor.call("sessions/next")
+    return
+  }
+
   const nowTimeS = Math.floor(Date.now() / 1000)
-  const touchedTimeS = Math.floor(activeSession.touchedAt.getTime() / 1000)
   const startTimeS = Math.floor(entry.startTime.getTime() / 1000)
+  const touchedTimeS = Math.floor( (activeSession.touchedAt ? activeSession.touchedAt.getTime() : startTimeS ) / 1000)
   const endTimeS = Math.min([Math.max([startTimeS + minTime], [touchedTimeS + touchBonus])], [startTimeS + maxTime])
   const countdown = endTimeS - nowTimeS
 
