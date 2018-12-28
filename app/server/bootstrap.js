@@ -4,8 +4,8 @@ Meteor.startup(function () {
 
 const minTime = 45 // seconds
 const maxTime = 75 // seconds
-const countdown = 5 // seconds
-const touchBonus = 5 // seconds
+const countdown = 3 // seconds
+const touchBonus = 6 // seconds
 
 const gameUpdate = function() {
   const activeSession = Sessions.current()

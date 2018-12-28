@@ -19,7 +19,16 @@ Meteor.methods({
    'sessions/next': function() {
 
       const requestedNumberOfLines = Meteor.users.totalPlayers() == 0 ? 1 : Meteor.users.totalPlayers()
-      const possiblePoems = _.shuffle(Poems.find({ numberOfLines: requestedNumberOfLines }).fetch())
+
+      var query = {
+        numberOfLines: requestedNumberOfLines
+      }
+
+      if (Sessions.current() && Sessions.current().selectionMode == "originals" ) {
+        query["modificationDepth"] = {$exists: false}
+      }
+
+      const possiblePoems = _.shuffle(Poems.find(query).fetch())
       const currentPoem = Sessions.current().currentPoem()
       
       var basePoem = possiblePoems[0]
