@@ -28,6 +28,21 @@ Meteor.methods({
         query["modificationDepth"] = {$exists: false}
       }
 
+      // if (Sessions.current() && Sessions.current().selectionMode == "samesession" ) {
+      //   var poems_ids = Sessions.current().history.map( function(entry){ return entry.poem })
+      // }      
+
+      if (Sessions.current() && Sessions.current().history && Sessions.current().selectionMode == "last_hour_and_originals" ) {
+        var offset = 1000 * 60 * 60 // 1 hour
+        var latest_poems = Sessions.current().history.filter( function(entry) { return entry.startTime.getTime() > ( Date.now() - offset ) })
+        var poems_ids = latest_poems.map( function(entry){ return entry.poem })
+        var originals_poems_query = {modificationDepth : {$exists: false}}
+        var latest_peoms_query = { _id: { $in: poems_ids } }
+        query['$or'] = [originals_poems_query, latest_peoms_query]
+      }      
+
+      console.log('next query: ', query)
+
       const possiblePoems = _.shuffle(Poems.find(query).fetch())
       const currentPoem = Sessions.current().currentPoem()
       

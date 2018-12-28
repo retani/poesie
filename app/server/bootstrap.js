@@ -4,7 +4,7 @@ Meteor.startup(function () {
 
 const minTime = 45 // seconds
 const maxTime = 75 // seconds
-const countdown = 3 // seconds
+const countdownAt = 3 // seconds
 const touchBonus = 6 // seconds
 
 const gameUpdate = function() {
@@ -29,7 +29,7 @@ const gameUpdate = function() {
 
 
   // render countdown
-  if (countdown <= 5) {
+  if (countdown <= countdownAt) {
     console.log("time is running out " + countdown)
     Sessions.update(activeSession, { $set: { 
       countdown: countdown,
@@ -44,6 +44,7 @@ const gameUpdate = function() {
 
   // next poem!
   if (countdown <= 0) {
+    console.log("session " + activeSession.title + " -> next")
     Meteor.call("sessions/next")
   }
 }

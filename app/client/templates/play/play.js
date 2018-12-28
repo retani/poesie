@@ -38,7 +38,7 @@ Template.Play.helpers({
   },
   waitText: function() {
     var countdown = Sessions.current().countdown
-    return "[Please wait " + countdown + "s to join. Maximum 5 participants]"
+    return "[Please wait " + countdown + "s to join.]"
   },
   line: function () {
     var username = Meteor.user().username
