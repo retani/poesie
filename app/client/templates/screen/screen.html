@@ -8,6 +8,10 @@
     {{/each}}
     <p align="right" class="author">
       {{poem.author}}
+      {{#if modified}}
+        <br />
+        v{{poem.modificationDepth}}
+      {{/if}}
     </p>
     <div class="note">
       <span style="display: inline-block">

@@ -14,6 +14,9 @@ Template.Screen.helpers({
   poem: function () {
     return Sessions.current().currentPoem()
   },
+  modified: function () {
+    return Sessions.current().currentPoem().modificationDepth
+  },
   totalUsers: function () {
     console.log(Meteor.users.find({}))
     return Meteor.users.find({"status.online": true}).count()

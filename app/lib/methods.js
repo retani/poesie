@@ -24,14 +24,17 @@ Meteor.methods({
         numberOfLines: requestedNumberOfLines
       }
 
+      // mode: originals
       if (Sessions.current() && Sessions.current().selectionMode == "originals" ) {
         query["modificationDepth"] = {$exists: false}
       }
 
-      // if (Sessions.current() && Sessions.current().selectionMode == "samesession" ) {
+      // mode: same_session
+      // if (Sessions.current() && Sessions.current().selectionMode == "same_session" ) {
       //   var poems_ids = Sessions.current().history.map( function(entry){ return entry.poem })
       // }      
 
+      // mode: last_hour_and_originals
       if (Sessions.current() && Sessions.current().history && Sessions.current().selectionMode == "last_hour_and_originals" ) {
         var offset = 1000 * 60 * 60 // 1 hour
         var latest_poems = Sessions.current().history.filter( function(entry) { return entry.startTime.getTime() > ( Date.now() - offset ) })
