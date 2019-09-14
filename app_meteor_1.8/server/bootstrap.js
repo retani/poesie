@@ -2,15 +2,10 @@ Meteor.startup(function () {
   Meteor.setInterval(gameUpdate,1000)
 });
 
-// const minTime = 60 // seconds
-// const maxTime = 80 // seconds
-// const countdownAt = 5 // seconds
-// const touchBonus = 10 // seconds
-
 const minTime = 60 // seconds
-const maxTime = 65 // seconds
+const maxTime = 80 // seconds
 const countdownAt = 5 // seconds
-const touchBonus = 1 // seconds
+const touchBonus = 10 // seconds
 
 const gameUpdate = function() {
   const activeSession = Sessions.current()

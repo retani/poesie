@@ -1,0 +1,30 @@
+<template name="Poems">
+  <h1>List of available poems</h1>
+
+  <ul class="poems">
+    <li>
+      <a class="button" href="{{ pathFor 'poemNew' }}">Add Poem</a>
+    </li>    
+    {{#each poems}}
+      {{> Poem}}
+    {{/each}}
+  </ul>
+
+  <aside>
+    <a href="{{ pathFor 'download' }}" class="export">download a backup of root poems</a><br>
+    <a class="import">load default root poems (don't overwrite any existing poems)</a>
+    {{#each importedPoems}}
+      {{ _id }} {{ title }}
+    {{/each}}
+
+  </aside>
+
+</template>
+
+<template name="Poem">
+  <li class="poem {{#if isNewPoem}}new{{/if}}">
+    <a href="{{ pathFor 'poemEdit' _id=this._id }}">
+      <tt><small>{{ numberOfLines }}</small>&nbsp;<b>{{count}}</b></tt><b>{{displayTitle}}</b>, {{author}}
+    </a>
+  </li>
+</template>

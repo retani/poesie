@@ -1,0 +1,22 @@
+<template name="Sessions">
+  <div class="sessions">
+    <h1>List of available sessions</h1>
+
+    <ul>
+      {{#each sessions}}
+        {{> session}}
+      {{/each}}
+      <li>
+        <a href="{{ pathFor 'sessionNew' }}">Add Session</a>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<template name="session">
+  <li class="{{#if active }}active{{/if}}">
+    <a href="{{ pathFor 'sessionEdit' _id=this._id }}">
+      <b>{{displayTitle}}</b> {{moFromNow createdAt}}
+    </a>
+  </li>
+</template>

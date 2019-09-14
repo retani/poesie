@@ -1,0 +1,12 @@
+<template name="EditSession">
+  <div class="edit editSession">
+    <h1>Edit Poem</h1>
+    {{#if session}}
+      {{> quickForm collection="Sessions" doc=session id="updateSessionForm" type="update" omitFields="updatedAt,createdAt" }}
+      <a class="remove">remove session</a><br>
+      <a class="removePoems">remove all poems of this session.</a>
+    {{else}}
+      {{> quickForm collection="Sessions" id="insertSessionForm" type="insert" omitFields="updatedAt,createdAt"}}
+    {{/if}}
+  </div>
+</template>

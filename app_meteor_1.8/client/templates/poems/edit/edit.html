@@ -1,0 +1,11 @@
+<template name="Edit">
+  <div class="edit">
+    <h1>Edit Poem</h1>
+    {{#if poem}}
+      {{> quickForm collection="Poems" doc=poem id="updatePoemForm" type="update" omitFields="updatedAt,createdAt" }}
+      <a class="remove">remove</a>
+    {{else}}
+      {{> quickForm collection="Poems" id="insertPoemForm" type="insert" omitFields="updatedAt,createdAt"}}
+    {{/if}}
+  </div>
+</template>

@@ -1,0 +1,11 @@
+<template name="Gallery">
+  {{#each poems}}
+    <h2>{{displayTitle}}</h2>
+    <p>
+      {{#each lines}}
+        {{ text }}<br>
+      {{/each}}  
+      {{author}} × {{ modificationDepth }}
+    </p>
+  {{/each}}
+</template>

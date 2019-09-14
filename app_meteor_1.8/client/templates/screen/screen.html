@@ -1,0 +1,27 @@
+<template name="Screen">
+  <div class="screen">
+    <h1 class="title">{{poem.title}}</h1>
+    {{#each poem.lines}}
+      <div class="poem">
+        {{text}}
+      </div>
+    {{/each}}
+    <p align="right" class="author">
+      {{poem.author}}
+      {{#if modified}}
+        <br />
+        v{{poem.modificationDepth}}
+      {{/if}}
+    </p>
+    <div class="note">
+      <span style="display: inline-block">
+        <img src="/qr.png">
+        <i>#changethepoem #onelineeach #48h</i><br />
+        https://poesie.intergestalt.dev
+      </span>
+    </div>
+    <div class="largeMessage">
+      {{session.largeMessage}}
+    </div>
+  </div>
+</template>

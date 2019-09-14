@@ -8,6 +8,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.5.5",
     "bourbon": "^4.3.4",
     "bourbon-bitters": "^1.2.1"
   },
